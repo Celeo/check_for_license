@@ -1,0 +1,23 @@
+[package]
+name = "check_for_license"
+version = "0.1.0"
+authors = ["Celeo <mattboulanger@fastmail.com>"]
+edition = "2018"
+description = ""
+readme = "README.md"
+homepage = "https://github.com/celeo/check_for_license"
+repository = "https://github.com/celeo/check_for_license"
+license = "MIT OR Apache-2.0"
+exclude = [
+  ".github"
+]
+
+[dependencies]
+anyhow = "1.0.31"
+kankyo = "0.3.0"
+log = "0.4.8"
+pretty_env_logger = "0.4.0"
+reqwest = { version = "0.10.4", features = ["json"]}
+serde = { version = "1.0.110", features = ["derive"]}
+serde_json = "1.0.53"
+tokio = { version = "0.2.21", features = ["full"] }
