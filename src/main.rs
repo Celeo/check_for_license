@@ -2,9 +2,10 @@ use anyhow::Result;
 use std::env;
 
 mod models;
-use models::*;
+use models::Config;
 mod bot;
 use bot::Bot;
+mod util;
 
 #[tokio::main]
 async fn main() -> Result<()> {
@@ -17,7 +18,7 @@ async fn main() -> Result<()> {
     let mut bot = Bot::new(Config::from_env()?)?;
     bot.login().await?;
 
-    // do stuff
+    bot.watch_subreddit("celeo").await?;
 
     Ok(())
 }

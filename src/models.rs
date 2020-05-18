@@ -11,6 +11,7 @@ pub struct Config {
     pub user_agent: String,
     pub client_id: String,
     pub client_secret: String,
+    pub github_username: String,
 }
 
 impl Config {
@@ -22,6 +23,7 @@ impl Config {
             user_agent: env::var("CFL_USER_AGENT")?,
             client_id: env::var("CFL_CLIENT_ID")?,
             client_secret: env::var("CFL_CLIENT_SECRET")?,
+            github_username: env::var("CFL_GITHUB_USERNAME")?,
         })
     }
 }
