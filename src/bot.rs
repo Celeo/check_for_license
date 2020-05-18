@@ -13,11 +13,11 @@ pub struct Bot {
     access_token: Option<String>,
 }
 
-fn build_client(config: &Config, acccess_token: Option<String>) -> Result<Client> {
+fn build_client(config: &Config, access_token: Option<String>) -> Result<Client> {
     let mut builder = ClientBuilder::new()
         .user_agent(&config.user_agent)
         .timeout(time::Duration::from_secs(60));
-    if let Some(t) = acccess_token {
+    if let Some(t) = access_token {
         let mut headers = header::HeaderMap::new();
         headers.insert(
             header::AUTHORIZATION,
