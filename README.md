@@ -29,8 +29,6 @@ cd check_for_license
 cargo build
 ```
 
-If you have [just](https://github.com/casey/just) installed, just run `just` in the project root.
-
 ## License
 
 Licensed under either of
